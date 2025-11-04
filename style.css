@@ -1,0 +1,195 @@
+/* style.css */
+
+/* --- General Styling --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+    color: #343a40;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #007bff; /* Blue - Warna Sekolah */
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #343a40; /* Darker bar for contrast */
+    color: white;
+    padding: 0.8em 0;
+    position: sticky; /* Sticky navigation bar */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Yellow hover effect */
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* --- Product Cards --- */
+#produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Make the products heading span the full grid width and sit above the items */
+#produk > h2 {
+    grid-column: 1 / -1;
+    text-align: center; /* Ensure centered even if global h2 changes */
+    margin-bottom: 20px;
+}
+
+.produk-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produk-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.produk-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.produk-item h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.harga {
+    font-size: 1.2em;
+    color: #dc3545;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-beli {
+    display: inline-block;
+    background-color: #28a745; /* Green Buy Button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-beli:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 30px;
+}
+
+/* --- Keranjang (Cart) Styling --- */
+#keranjang-container {
+    background-color: #fff3cd; /* Light yellow background for cart */
+    border: 1px solid #ffeeba;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#keranjang-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#keranjang-list li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid #ffc107;
+    font-size: 0.95em;
+}
+
+#total-harga {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #007bff;
+    text-align: right;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px dashed #ffc107;
+}
+/* --- Hero Image Styling --- */
+.hero {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
